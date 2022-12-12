@@ -22,7 +22,7 @@
     2.2. Tints: #fdf2e9, #fae5d3
     2.3. Shades: #cf711f
     2.4. Accents:
-    2.5. Grays: #555, #333
+    2.5. Grays: #555, #333, #ddd, #888
 
   3. IMAGES: Unsplash
 
@@ -75,7 +75,7 @@
   display: flex;
   align-items: center;
   gap: 3.2rem;
-  height: 10vh;
+  /* height: 10vh; */
 }
 
 .main-nav-link:link, .main-nav-link:visited {
@@ -113,7 +113,7 @@
 .section-hero {
   background-color: var(--main-tint);
   padding: 4.8rem 0 9.6rem 0;
-  height: 90vh; 
+  /* height: 90vh;  */
 }
 
 .hero {
@@ -175,6 +175,36 @@
 }
 
 /****************************************/
+        /** FEATURED IN SECTION */
+/****************************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  color: #888;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.75px;
+  margin: 2.4rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  /** Makes all the images - gray (with some opacity) */
+  filter: brightness(0);   /** Makes them black */
+  opacity: 50%;
+}
+
+/****************************************/
         /** HOW IT WORKS SECTION */
 /****************************************/
 
@@ -220,15 +250,15 @@
   /** Height doesn't work - use padding-bottom (hack) */
   /* height: 60%; */
   padding-bottom: 60%;
-  z-index: -2;
+  z-index: -2;  /** On the very back */
 }
 
-/** The smaller circle */
+/** The smaller circle (we cannot use ::before again) */
 .step-img-box::after {
-  background-color: #fae5d3;
+  background-color: #fae5d3;  /** Darker tint */
   width: 45%;
   padding-bottom: 45%;
-  z-index: -1;
+  z-index: -1;  /** Behind the img but before the other circle */
 }
 
 .step-img {
