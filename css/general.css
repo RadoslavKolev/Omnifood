@@ -151,7 +151,7 @@ body {
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
   /** Putting transition to the original "state" */
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn--full:link, .btn--full:visited {
@@ -175,9 +175,37 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link, .link:visited {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover, .link:active {
+  color: var(--main-shade);
+  /** If we use border: none, the whole layout moves which is not good UX. Use "transparent" keyword instead */
+  border-bottom: 1px solid transparent;
+}
+
+strong {
+  font-weight: 500;
+}
+
 /** Helper class (we don't want all the links to apply the margin-right rule */
 /** We could also use Flexbox, but that seems too much work */
 /** It's not necessary to use !important but we want to ensure that this rule has the highest priority */
 .margin-right-sm {
   margin-right: 1.6rem !important;  
 }
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+

@@ -32,6 +32,7 @@
 
   6. BORDER-RADIUS:
     Default: 9px (0.9rem)
+    Medium: 11px (1.1rem)
 
   7. WHITESPACE
     SPACING SYSTEM (px):
@@ -264,4 +265,120 @@
 .step-img {
   width: 35%;
   /* z-index: 1; */
+}
+
+/****************************************/
+        /** MEALS SECTION */
+/****************************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  /** Makes the top-left and top-right radius rounded */
+  overflow: hidden; 
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  /* transform: translateY(-1.2rem); */
+  transform: scale(1.05);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+  padding: 4.8rem;
+  padding-top: 3.2rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 4px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px; /** Large value */
+  padding: 0.4rem 0.8rem;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-title {
+  color: var(--secondary-gray);
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  /** ionicons are treated like text (stroke and fill don't work) */
+  color: var(--primary-color);
+}
+
+.meal-img {
+  width: 100%;
+  /* border-top-left-radius: 11px;
+  border-top-right-radius: 11px; */
+}
+
+/** Diets */
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #51cf66
+}
+
+/** Link for all recipes */
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
 }
