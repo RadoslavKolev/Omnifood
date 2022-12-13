@@ -91,6 +91,10 @@ body {
   row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--center-vertically {
   align-items: center;
 }
@@ -188,6 +192,30 @@ body {
   color: var(--main-shade);
   /** If we use border: none, the whole layout moves which is not good UX. Use "transparent" keyword instead */
   border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #51cf66
+}
+
+.list-icon--red {
+  color: orangered;
 }
 
 strong {
