@@ -47,6 +47,12 @@
   box-sizing: border-box;
 }
 
+/** Changing the default border (on Tab) */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 8px rgba(230, 125, 34, 0.5);
+}
+
 /** Defining some global variables */
 :root {
   --primary-color: #e67e22;
@@ -147,23 +153,29 @@ body {
   margin-bottom: 1.6rem;
 }
 
-.btn:link, .btn:visited {
+.btn,
+.btn:link, 
+.btn:visited {
   display: inline-block;  /** Applies vertical padding */
   font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
+  border: none;
+  cursor: pointer;
   /** Putting transition to the original "state" */
   transition: all 0.3s;
 }
 
-.btn--full:link, .btn--full:visited {
+.btn--full:link, 
+.btn--full:visited {
   background-color: var(--primary-color);
   color: #fff;
 }
 
-.btn--full:hover, .btn--full:active {
+.btn--full:hover, 
+.btn--full:active {
   background-color: var(--main-shade);
 }
 
@@ -177,6 +189,18 @@ body {
   /** Trick to add border inside */
   /** inset - shadow will be added inside of the element */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: var(--main-tint);
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link, .link:visited {
