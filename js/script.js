@@ -10,10 +10,39 @@ const openMobileNavBar = () => {
   const headerEl = document.querySelector("header");
   const btnNavEl = document.querySelector(".btn-mobile-nav");
 
-  //* "toggle" will add the class if it doesn't exist or vise versa
+  // "toggle" will add the class if it doesn't exist or vise versa
   btnNavEl.addEventListener("click", () => {
     headerEl.classList.toggle("nav-open");
   });
+};
+
+//* Implementing smooth scrolling animation
+const smoothScrolling = () => {
+  const allLinks = document.querySelectorAll("a:link");
+  
+  allLinks.forEach(link => link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    if (href === '#') {
+      // Scroll back to top
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    } else if (href !== "#" && href.startsWith("#")) {
+      // Scroll to other sections
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    // Close mobile navigation
+    if (link.classList.contains("main-nav-list")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  }));
 };
 
 //* Fixing flexbox gap property missing in some Safari versions
@@ -36,9 +65,8 @@ const checkFlexGap = () => {
 
 setCurrentYear();
 openMobileNavBar();
+smoothScrolling();
 checkFlexGap();
-
-// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
 .no-flexbox-gap .main-nav-list li:not(:last-child) {

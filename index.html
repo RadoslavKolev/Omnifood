@@ -19,6 +19,7 @@
     <!-- Adding ionicons (<ion-icon name="heart"></ion-icon>) -->
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script defer src="js/script.js"></script>
     <title>Omnifood</title>
   </head>
@@ -37,19 +38,19 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
-            <a href="#" class="main-nav-link">How it works</a>
+            <a href="#how-it-works" class="main-nav-link">How it works</a>
           </li>
           <li>
-            <a href="#" class="main-nav-link">Meals</a>
+            <a href="#meals" class="main-nav-link">Meals</a>
           </li>
           <li>
-            <a href="#" class="main-nav-link">Testimonials</a>
+            <a href="#testimonials" class="main-nav-link">Testimonials</a>
           </li>
           <li>
-            <a href="#" class="main-nav-link">Pricing</a>
+            <a href="#pricing" class="main-nav-link">Pricing</a>
           </li>
           <li>
-            <a href="#" class="main-nav-link nav-cta">Try for free</a>
+            <a href="#cta" class="main-nav-link nav-cta">Try for free</a>
           </li>
         </ul>
       </nav>
@@ -76,10 +77,10 @@
             </p>
 
             <!-- Buttons -->
-            <a href="#" class="btn btn--full margin-right-sm">
+            <a href="#cta" class="btn btn--full margin-right-sm">
               Start eating well
             </a>
-            <a href="#" class="btn btn--outline">
+            <a href="#how-it-works" class="btn btn--outline">
               Learn More &darr;
             </a>
 
@@ -160,7 +161,7 @@
       </section>
 
       <!-- How it works Section -->
-      <section class="section-how">
+      <section id="how-it-works" class="section-how">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -230,7 +231,7 @@
       </section>
 
       <!-- Meals Section -->
-      <section class="section-meals">
+      <section id="meals" class="section-meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -359,7 +360,7 @@
       </section>
 
       <!-- Testimonials -->
-      <section class="section-testimonials">
+      <section id="testimonials" class="section-testimonials">
         <div class="testimonials-container">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">
@@ -494,7 +495,7 @@
       </section>
 
       <!-- Pricing Section -->
-      <section class="section-pricing">
+      <section id="pricing" class="section-pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -611,7 +612,7 @@
       </section>
 
       <!-- CTA Section -->
-      <section class="section-cta">
+      <section id="cta" class="section-cta">
         <div class="container">
           <div class="cta">
             <div class="cta-textbox">

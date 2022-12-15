@@ -69,6 +69,9 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden; 
+  /** Smooth scrolling animation when pressing a link */
+  /** Doesn't work on Safari and Edge!! */
+  /* scroll-behavior: smooth;   */
 }
 
 /** First we choose a generic family and then we think for a specific font */
