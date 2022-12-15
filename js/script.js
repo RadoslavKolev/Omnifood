@@ -43,13 +43,16 @@ allLinks.forEach(link => link.addEventListener("click", (e) => {
 
 //* Sticky navigation
 const sectionHeroEl = document.querySelector(".section-hero");
+// console.log(sectionHeroEl.offsetWidth);
 
 const obs = new IntersectionObserver(entries => {
   const entry = entries[0];
 
   if (!entry.isIntersecting) {
-    // If we add that class to the header, it makes the page "jump"
-    document.body.classList.add('sticky');
+    if (sectionHeroEl.offsetWidth > 944) {
+      // If we add that class to the header, it makes the page "jump"
+      document.body.classList.add('sticky');
+    }
   } else {
     document.body.classList.remove('sticky');
   }
