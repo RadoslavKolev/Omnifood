@@ -18,6 +18,7 @@ const openMobileNavBar = () => {
 
 //* Implementing smooth scrolling animation
 const smoothScrolling = () => {
+  const headerEl = document.querySelector("header");
   const allLinks = document.querySelectorAll("a:link");
   
   allLinks.forEach(link => link.addEventListener("click", (e) => {
@@ -30,8 +31,10 @@ const smoothScrolling = () => {
         top: 0,
         behavior: "smooth"
       });
-    } else if (href !== "#" && href.startsWith("#")) {
-      // Scroll to other sections
+    } 
+    
+    // Scroll to other sections
+    if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({
         behavior: "smooth"
@@ -39,7 +42,7 @@ const smoothScrolling = () => {
     }
 
     // Close mobile navigation
-    if (link.classList.contains("main-nav-list")) {
+    if (link.classList.contains("main-nav-link")) {
       headerEl.classList.toggle("nav-open");
     }
   }));
