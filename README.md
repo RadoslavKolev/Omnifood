@@ -1,5 +1,10 @@
 # Omnifood
 
+<h3>
+  The Website is currently hosted on Netlify: 
+  <a href="https://omnifood-webapp.netlify.app/">Click Here to see Live Demo</a>
+</h3>
+
 <h3>Project Information</h3>
 
 <p>
@@ -15,6 +20,7 @@
   The project in this course simulates a real-given freelancing job. Some client wants a website for
   its product and provides us with the website content. Based on that, I had to plan the design, choose
   the right website personality, fonts, colors, etc., make a prototype, code it out, test it and finally - deploy.
+  The Website is fully responsive.
 </p>
 
 <p><em>
@@ -48,10 +54,3 @@
   On top of that, there is a special section for learning the design principles - 
   How to use fonts, colors, spacing, images and many more
 </p>
-
-<h3>
-  The Website is currently hosted on Netlify: 
-  <a href="https://omnifood-webapp.netlify.app/">Click Here to see Live Demo</a>
-</h3>
-
-<p>The Website is fully responsive</p>
